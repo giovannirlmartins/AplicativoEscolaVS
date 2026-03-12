@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace AplicativoEscola
 {
-    internal class Aluno
+    public class Aluno
     {
+       
     }
 }

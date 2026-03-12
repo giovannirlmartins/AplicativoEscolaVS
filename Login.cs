@@ -38,7 +38,7 @@ namespace AplicativoEscola
                 comando.Parameters.AddWithValue("@senha", txtSenha.Text);
                 reader = comando.ExecuteReader();
 
-                if(reader)
+                if(reader.HasRows)
                 {
                     MessageBox.Show("Login realizado com sucesso!");
                     this.Hide();
@@ -57,6 +57,13 @@ namespace AplicativoEscola
             {
                 MessageBox.Show("Erro ao realizar login. Erro: " + ex.Message);
             }
+        }
+
+        private void lblCadastrar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmCadastro telaCadastro = new frmCadastro();
+            telaCadastro.ShowDialog();
+
         }
     }
 }
