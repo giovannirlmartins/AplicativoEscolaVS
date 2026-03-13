@@ -38,7 +38,7 @@ namespace AplicativoEscola
                 comando.Parameters.AddWithValue("@senha", txtSenha.Text);
                 reader = comando.ExecuteReader();
 
-                if(reader)
+                if(reader.HasRows)
                 {
                     MessageBox.Show("Login realizado com sucesso!");
                     this.Hide();
