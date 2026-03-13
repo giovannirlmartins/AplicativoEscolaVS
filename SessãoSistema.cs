@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace AplicativoEscola
 {
-    public class Aluno
+    public static class SessãoSistema
     {
-       
+        public static string idUsuario { get; set; }
+        public static string nomeUsuario { get; set; }
+
+
     }
 }

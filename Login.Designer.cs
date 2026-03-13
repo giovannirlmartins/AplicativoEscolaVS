@@ -83,6 +83,7 @@
             this.lblCadastrar.TabStop = true;
             this.lblCadastrar.Text = "Cadastrar";
             this.lblCadastrar.VisitedLinkColor = System.Drawing.Color.White;
+            this.lblCadastrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblCadastrar_LinkClicked);
             // 
             // txtSenha
             // 
@@ -129,11 +130,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackgroundImage = global::AplicativoEscola.Properties.Resources.background__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 412);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmLogin";
-            this.Text = "Login";
+            this.Text = "Escola Viver Bem";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

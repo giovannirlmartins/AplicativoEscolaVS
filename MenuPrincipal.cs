@@ -16,5 +16,10 @@ namespace AplicativoEscola
         {
             InitializeComponent();
         }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            lblBemVindo.Text = "Bem-vindo, Prof. " + SessãoSistema.nomeUsuario.Split(' ')[0] + "!";
+        }
     }
 }

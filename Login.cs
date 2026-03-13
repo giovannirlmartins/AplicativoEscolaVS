@@ -38,9 +38,13 @@ namespace AplicativoEscola
                 comando.Parameters.AddWithValue("@senha", txtSenha.Text);
                 reader = comando.ExecuteReader();
 
-                if(reader.HasRows)
+                if(reader.Read())
                 {
                     MessageBox.Show("Login realizado com sucesso!");
+                    SessãoSistema.idUsuario = reader["cpf"].ToString();
+                    SessãoSistema.nomeUsuario = reader["nome"].ToString();
+                    reader.Close();
+                    conexao.FecharConexao();
                     this.Hide();
                     frmPrincipal menuPrincipal = new frmPrincipal();
                     menuPrincipal.ShowDialog();                    
@@ -50,13 +54,22 @@ namespace AplicativoEscola
                 else
                 {
                     MessageBox.Show("Usuário ou senha incorretos. Tente novamente.");
+                    conexao.FecharConexao();
                 }
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao realizar login. Erro: " + ex.Message);
+                conexao.FecharConexao();
             }
+        }
+
+        private void lblCadastrar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmCadastro telaCadastro = new frmCadastro();
+            telaCadastro.ShowDialog();
+
         }
     }
 }
