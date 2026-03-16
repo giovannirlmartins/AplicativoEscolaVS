@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace AplicativoEscola
 {
-    public partial class frmPrincipal : Form
+    public partial class BuscaAlunos : Form
     {
-        public frmPrincipal()
+        public BuscaAlunos()
         {
             InitializeComponent();
-        }
-
-        private void frmPrincipal_Load(object sender, EventArgs e)
-        {
-            lblBemVindo.Text = "Bem-vindo, Prof. " + SessãoSistema.nomeUsuario.Split(' ')[0] + "!";
         }
     }
 }
