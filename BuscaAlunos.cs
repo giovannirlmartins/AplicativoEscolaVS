@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace AplicativoEscola
 {
-    public partial class BuscaAlunos : Form
+    public partial class btnPesquisar : Form
     {
-        public BuscaAlunos()
+        public btnPesquisar()
         {
             InitializeComponent();
+        }
+
+        private void btnPesquisar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
