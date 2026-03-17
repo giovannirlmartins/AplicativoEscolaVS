@@ -19,8 +19,13 @@ namespace AplicativoEscola
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            Aluno aluno = new Aluno(txtNomeEstudante.ToString(), txtDataNascimentoAluno.ToString(), txtNomeResponsavel.ToString(), txtDataNascimentoResponsavel.ToString(), txtTelefoneResponsavel.ToString(), txtCpfResponsavel.ToString());
+            Aluno aluno = new Aluno(txtNomeEstudante.Text, txtDataNascimentoAluno.Text, txtNomeResponsavel.Text, txtDataNascimentoResponsavel.Text, txtTelefoneResponsavel.Text, txtCpfResponsavel.Text);
             aluno.CadastrarAluno();
+        }
+
+        private void frmCadastroAlunos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

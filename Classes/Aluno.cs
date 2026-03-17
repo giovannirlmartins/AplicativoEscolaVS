@@ -9,14 +9,14 @@ namespace AplicativoEscola
 {
     public class Aluno
     {
-        public string nomeAluno;
-        public string dataNascimentoAluno;
-        public string nomeResponsavel;
-        public string dataNascimentoResponsavel;
-        public string turmas;
-        private string _idAluno;
-        private string _telefoneResponsavel;
-        private string _cpfResponsavel;
+        public string nomeAluno { get; set; }
+        public string dataNascimentoAluno { get; set; }
+        public string nomeResponsavel { get; set; }
+        public string dataNascimentoResponsavel { get; set; }
+        public string turmas { get; set; }
+        public string _idAluno { get; private set; }
+        public string _telefoneResponsavel { get; private set; }
+        public string _cpfResponsavel { get; private set; }
         public Aluno(string nomeAlunofrm, string dataNascimentoAlunofrm, string nomeReponsavelfrm, string dataNascimentoResponsavelfrm, string _telefoneResponsavelfrm, string _cpfResponsavelfrm)
         {
             nomeAluno = nomeAlunofrm;
@@ -51,5 +51,30 @@ namespace AplicativoEscola
             }
         }
 
+        public void EditarAluno()
+        {
+            try
+            {
+                Conexao conexao = new Conexao();
+                string sql = "UPDATE aluno SET nomeAluno = @nomeAluno, dataNascimentoAluno = @dataNascimentoAluno, nomeResponsavel = @nomeResponsavel, dataNascimentoResponsavel = @dataNascimentoResponsavel, telefoneResponsavel = @telefoneResponsavel, cpfResponsavel = @cpfResponsavel WHERE idAluno = @idAluno";
+                conexao.AbrirConexao();
+                MySql.Data.MySqlClient.MySqlCommand comando = new MySql.Data.MySqlClient.MySqlCommand(sql, conexao.conexao);
+                comando.Parameters.AddWithValue("@nomeAluno", nomeAluno);
+                comando.Parameters.AddWithValue("@dataNascimentoAluno", dataNascimentoAluno);
+                comando.Parameters.AddWithValue("@nomeResponsavel", nomeResponsavel);
+                comando.Parameters.AddWithValue("@dataNascimentoResponsavel", dataNascimentoResponsavel);
+                comando.Parameters.AddWithValue("@telefoneResponsavel", _telefoneResponsavel);
+                comando.Parameters.AddWithValue("@cpfResponsavel", _cpfResponsavel);
+                comando.Parameters.AddWithValue("@idAluno", _idAluno);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Aluno editado com sucesso!");
+                conexao.FecharConexao();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao editar aluno. Erro: " + ex.Message);
+            }
+
+        }
     }
 }

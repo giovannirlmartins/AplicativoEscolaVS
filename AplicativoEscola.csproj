@@ -109,6 +109,12 @@
       <DependentUpon>Cadastro.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Conexao.cs" />
+    <Compile Include="Forms\AlterarAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AlterarAlunos.Designer.cs">
+      <DependentUpon>AlterarAlunos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CadastroAlunos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AlterarAlunos.resx">
+      <DependentUpon>AlterarAlunos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CadastroAlunos.resx">
       <DependentUpon>CadastroAlunos.cs</DependentUpon>

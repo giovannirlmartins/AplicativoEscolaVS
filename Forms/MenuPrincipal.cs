@@ -47,7 +47,7 @@ namespace AplicativoEscola
         private void buscaAlunos_Click(object sender, EventArgs e)
         {
             //precisa chamar a tela de busca de alunos
-            btnPesquisar buscaAlunos = new btnPesquisar();
+            frmBuscarAlunos buscaAlunos = new frmBuscarAlunos();
             buscaAlunos.TopLevel = false;
             buscaAlunos.FormBorderStyle = FormBorderStyle.None;
             buscaAlunos.Dock = DockStyle.Fill;

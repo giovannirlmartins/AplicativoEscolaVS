@@ -1,6 +1,6 @@
 ﻿namespace AplicativoEscola
 {
-    partial class frmCadastroAlunos
+    partial class frmAlterarAlunos
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.txtNomeEstudante = new System.Windows.Forms.TextBox();
-            this.lblCadastroEstudante = new System.Windows.Forms.Label();
+            this.lblEditarEstudante = new System.Windows.Forms.Label();
             this.clbTurmas = new System.Windows.Forms.CheckedListBox();
-            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.lblNomeEstudante = new System.Windows.Forms.Label();
             this.lblDataNascimentoResponsavel = new System.Windows.Forms.Label();
             this.lblNomeResponsavel = new System.Windows.Forms.Label();
@@ -44,6 +44,7 @@
             this.txtTelefoneResponsavel = new System.Windows.Forms.MaskedTextBox();
             this.txtCpfResponsavel = new System.Windows.Forms.MaskedTextBox();
             this.lblTurma = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNomeEstudante
@@ -53,16 +54,16 @@
             this.txtNomeEstudante.Size = new System.Drawing.Size(255, 20);
             this.txtNomeEstudante.TabIndex = 0;
             // 
-            // lblCadastroEstudante
+            // lblEditarEstudante
             // 
-            this.lblCadastroEstudante.AutoSize = true;
-            this.lblCadastroEstudante.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadastroEstudante.ForeColor = System.Drawing.Color.White;
-            this.lblCadastroEstudante.Location = new System.Drawing.Point(29, 28);
-            this.lblCadastroEstudante.Name = "lblCadastroEstudante";
-            this.lblCadastroEstudante.Size = new System.Drawing.Size(180, 19);
-            this.lblCadastroEstudante.TabIndex = 1;
-            this.lblCadastroEstudante.Text = "Cadastro do Estudante";
+            this.lblEditarEstudante.AutoSize = true;
+            this.lblEditarEstudante.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditarEstudante.ForeColor = System.Drawing.Color.White;
+            this.lblEditarEstudante.Location = new System.Drawing.Point(29, 28);
+            this.lblEditarEstudante.Name = "lblEditarEstudante";
+            this.lblEditarEstudante.Size = new System.Drawing.Size(134, 19);
+            this.lblEditarEstudante.TabIndex = 1;
+            this.lblEditarEstudante.Text = "Editar Estudante";
             // 
             // clbTurmas
             // 
@@ -72,15 +73,15 @@
             this.clbTurmas.Size = new System.Drawing.Size(210, 139);
             this.clbTurmas.TabIndex = 2;
             // 
-            // btnCadastrar
+            // btnSalvar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(246, 242);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(175, 23);
-            this.btnCadastrar.TabIndex = 3;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            this.btnSalvar.Location = new System.Drawing.Point(33, 243);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(175, 23);
+            this.btnSalvar.TabIndex = 3;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // lblNomeEstudante
             // 
@@ -198,12 +199,23 @@
             this.lblTurma.TabIndex = 16;
             this.lblTurma.Text = "Turma:";
             // 
-            // frmCadastroAlunos
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(238, 243);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(175, 23);
+            this.btnCancelar.TabIndex = 17;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // frmAlterarAlunos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(44)))), ((int)(((byte)(89)))));
             this.ClientSize = new System.Drawing.Size(667, 288);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblTurma);
             this.Controls.Add(this.txtCpfResponsavel);
             this.Controls.Add(this.txtTelefoneResponsavel);
@@ -216,12 +228,12 @@
             this.Controls.Add(this.txtNomeResponsavel);
             this.Controls.Add(this.lblDataNascimentoResponsavel);
             this.Controls.Add(this.lblNomeEstudante);
-            this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.clbTurmas);
-            this.Controls.Add(this.lblCadastroEstudante);
+            this.Controls.Add(this.lblEditarEstudante);
             this.Controls.Add(this.txtNomeEstudante);
-            this.Name = "frmCadastroAlunos";
-            this.Text = "Cadastro Alunos";
+            this.Name = "frmAlterarAlunos";
+            this.Text = "Editar Alunos";
             this.Load += new System.EventHandler(this.frmCadastroAlunos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -231,9 +243,9 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtNomeEstudante;
-        private System.Windows.Forms.Label lblCadastroEstudante;
+        private System.Windows.Forms.Label lblEditarEstudante;
         private System.Windows.Forms.CheckedListBox clbTurmas;
-        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label lblNomeEstudante;
         private System.Windows.Forms.Label lblDataNascimentoResponsavel;
         private System.Windows.Forms.Label lblNomeResponsavel;
@@ -246,5 +258,6 @@
         private System.Windows.Forms.MaskedTextBox txtTelefoneResponsavel;
         private System.Windows.Forms.MaskedTextBox txtCpfResponsavel;
         private System.Windows.Forms.Label lblTurma;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
