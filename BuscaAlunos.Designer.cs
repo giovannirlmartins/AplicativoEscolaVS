@@ -30,9 +30,9 @@
         {
             this.gridBusca = new System.Windows.Forms.DataGridView();
             this.cbxTipoBusca = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBusca = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnEditarAluno = new System.Windows.Forms.Button();
             this.btnExcluirAluno = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridBusca)).BeginInit();
@@ -51,22 +51,22 @@
             // 
             this.cbxTipoBusca.FormattingEnabled = true;
             this.cbxTipoBusca.Items.AddRange(new object[] {
-            "NOME DO ALUNO",
-            "NOME DO RESP.",
-            "CPF RESP.",
-            ""});
+            "Nome do Aluno",
+            "Nome do Resp.",
+            "CPF do Resp."});
             this.cbxTipoBusca.Location = new System.Drawing.Point(402, 65);
             this.cbxTipoBusca.Name = "cbxTipoBusca";
-            this.cbxTipoBusca.Size = new System.Drawing.Size(103, 21);
+            this.cbxTipoBusca.Size = new System.Drawing.Size(134, 21);
             this.cbxTipoBusca.TabIndex = 1;
-            this.cbxTipoBusca.Text = "Tipo de Busca";
+            this.cbxTipoBusca.Text = "Nome do Aluno";
             // 
-            // textBox1
+            // txtBusca
             // 
-            this.textBox1.Location = new System.Drawing.Point(76, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(318, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtBusca.Location = new System.Drawing.Point(76, 65);
+            this.txtBusca.Name = "txtBusca";
+            this.txtBusca.Size = new System.Drawing.Size(318, 20);
+            this.txtBusca.TabIndex = 2;
+            this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
             // 
             // lblBuscar
             // 
@@ -79,20 +79,21 @@
             this.lblBuscar.TabIndex = 3;
             this.lblBuscar.Text = "Busca:";
             // 
-            // button1
+            // btnPesquisar
             // 
-            this.button1.Location = new System.Drawing.Point(511, 64);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Pesquisar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Location = new System.Drawing.Point(542, 64);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(67, 23);
+            this.btnPesquisar.TabIndex = 4;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnEditarAluno
             // 
-            this.btnEditarAluno.Location = new System.Drawing.Point(596, 65);
+            this.btnEditarAluno.Location = new System.Drawing.Point(649, 65);
             this.btnEditarAluno.Name = "btnEditarAluno";
-            this.btnEditarAluno.Size = new System.Drawing.Size(93, 23);
+            this.btnEditarAluno.Size = new System.Drawing.Size(67, 23);
             this.btnEditarAluno.TabIndex = 5;
             this.btnEditarAluno.Text = "Editar";
             this.btnEditarAluno.UseVisualStyleBackColor = true;
@@ -100,12 +101,13 @@
             // 
             // btnExcluirAluno
             // 
-            this.btnExcluirAluno.Location = new System.Drawing.Point(695, 65);
+            this.btnExcluirAluno.Location = new System.Drawing.Point(720, 65);
             this.btnExcluirAluno.Name = "btnExcluirAluno";
-            this.btnExcluirAluno.Size = new System.Drawing.Size(93, 23);
+            this.btnExcluirAluno.Size = new System.Drawing.Size(68, 23);
             this.btnExcluirAluno.TabIndex = 6;
             this.btnExcluirAluno.Text = "Excluir";
             this.btnExcluirAluno.UseVisualStyleBackColor = true;
+            this.btnExcluirAluno.Click += new System.EventHandler(this.btnExcluirAluno_Click);
             // 
             // frmBuscarAlunos
             // 
@@ -115,9 +117,9 @@
             this.ClientSize = new System.Drawing.Size(800, 372);
             this.Controls.Add(this.btnExcluirAluno);
             this.Controls.Add(this.btnEditarAluno);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.lblBuscar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.cbxTipoBusca);
             this.Controls.Add(this.gridBusca);
             this.Name = "frmBuscarAlunos";
@@ -132,9 +134,9 @@
 
         private System.Windows.Forms.DataGridView gridBusca;
         private System.Windows.Forms.ComboBox cbxTipoBusca;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.Label lblBuscar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnEditarAluno;
         private System.Windows.Forms.Button btnExcluirAluno;
     }
