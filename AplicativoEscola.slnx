@@ -1,3 +1,6 @@
 <Solution>
   <Project Path="AplicativoEscola.csproj" Id="6975c494-7978-4c4d-9fe4-5a9db2af3146" />
+  <Project Path="Setup/Aplicativo Escola/Aplicativo Escola.vdproj" Type="Installer">
+    <Build />
+  </Project>
 </Solution>

@@ -5,16 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Configuration;
 
 namespace AplicativoEscola
 {
     public class Conexao
     {
         // 4 informações principais
-        string servidor = "localhost";
-        string bancoDeDados = "aplicativoescola";
-        string usuario = "root";
-        string senha = "";
+        //string servidor = "localhost";
+        //string bancoDeDados = "aplicativoescola";
+        //string usuario = "root";
+        //string senha = "";
 
         // objeto de conexão
         public MySqlConnection conexao = null;
@@ -25,7 +26,8 @@ namespace AplicativoEscola
             try
             {
                 // string de conexão
-                string caminhoConexao = $"server={servidor}; database={bancoDeDados}; user={usuario}; password={senha}";
+                string caminhoConexao = ConfigurationManager.ConnectionStrings["MinhaConexaoMysql"].ConnectionString;
+                //$"server={servidor}; database={bancoDeDados}; user={usuario}; password={senha}";
                 conexao = new MySqlConnection(caminhoConexao);
 
                 conexao.Open();
@@ -41,7 +43,7 @@ namespace AplicativoEscola
             try
             {
                 // string de conexão
-                string caminhoConexao = $"server={servidor}; database={bancoDeDados}; user={usuario}; password={senha}";
+                string caminhoConexao = ConfigurationManager.ConnectionStrings["MinhaConexaoMysql"].ConnectionString;
                 conexao = new MySqlConnection(caminhoConexao);
 
                 conexao.Close();
